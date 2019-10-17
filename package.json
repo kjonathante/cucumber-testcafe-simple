@@ -1,0 +1,25 @@
+{
+  "name": "cucumber-testcafe-simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjonathante/cucumber-testcafe-simple.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kjonathante/cucumber-testcafe-simple/issues"
+  },
+  "homepage": "https://github.com/kjonathante/cucumber-testcafe-simple#readme",
+  "dependencies": {
+    "cucumber": "^5.1.0",
+    "multiple-cucumber-html-reporter": "^1.13.1",
+    "testcafe": "^1.6.0"
+  }
+}
