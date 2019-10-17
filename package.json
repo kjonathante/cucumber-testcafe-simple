@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js",
-    "test-chrome-report": "./node_modules/.bin/cucumber-js  --format json:./reports/chrome.json --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\""
+    "clean-reports": "rm -rf reports/*",
+    "test-chrome-report": "./node_modules/.bin/cucumber-js  --format json:./reports/chrome.json --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
+    "generate-report": "rm -rf reports/combined && node src/prepareJson && node src/generateHtml",
+    "e2e": "npm run clean-reports && npm run test-chrome-report && npm run generate-report"
   },
   "repository": {
     "type": "git",
