@@ -7,7 +7,8 @@
     "clean-reports": "rm -rf reports/*",
     "test-chrome-report": "./node_modules/.bin/cucumber-js  --format json:./reports/chrome.json --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
     "generate-report": "rm -rf reports/combined && node src/prepareJson && node src/generateHtml",
-    "e2e": "npm run clean-reports && npm run test-chrome-report && npm run generate-report"
+    "open-in-browser": "/usr/bin/open -a \"/Applications/Google Chrome.app\" 'reports/combined/index.html'",
+    "e2e": "npm run clean-reports && npm run test-chrome-report && npm run generate-report && npm run open-in-browser"
   },
   "repository": {
     "type": "git",
