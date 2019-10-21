@@ -18,7 +18,7 @@
     "e2edocker": "xvfb-run --server-num=99 --server-args='-ac -screen 0 1024x768x16' npm run e2e",
     "testDockerChrome": "xvfb-run --server-num=99 --server-args='-ac -screen 0 1024x768x16' npm run testChrome",
     "testDockerFirefox": "xvfb-run --server-num=99 --server-args='-ac -screen 0 1024x768x16' npm run testFirefox",
-    "buildBrowsers": "docker build -t browsers docker/browsers/",
+    "buildBrowsers": "docker build -t browsers -f docker/browsers/Dockerfile .",
     "buildJenkins": "mkdir -p $npm_package_jenkinsJobPath && cp -Ra $npm_package_jenkinsJobConfigPath/* $npm_package_jenkinsJobPath && docker build -t jenkinstescafe docker/jenkins/",
     "stopBrowsers": "docker stop $(docker ps -qa --filter ancestor=browsers)",
     "stopJenkins": "docker stop $(docker ps -qa --filter ancestor=jenkinstescafe)",
